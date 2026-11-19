@@ -1,18 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mis Gustos y Yo</title>
+    <title>THE MATRIX // Sistema de Análisis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="Intereses.html">Intereses</a>
-        <a href="Institucion.html">EESTN1</a>
-    </nav>
- <h1>Buenas, Yo soy felipe vizcarra y en esta pagina voy a contar acerca de mis intereses en juegos, experiencia y actividades en la EEST N1</h1>
-    
+    <!-- Fondo animado con Canvas -->
+    <canvas id="matrix-bg"></canvas>
+    <!-- Efecto sutil de monitor CRT -->
+    <div class="crt-overlay"></div>
+
+    <header>
+        <nav>
+            <div class="logo">[ SYSTEM://MATRIX_1999 ]</div>
+            <ul>
+                <li><a href="#inicio">01_INICIO</a></li>
+                <li><a href="#trama">02_LA_ELECCION</a></li>
+                <li><a href="#web">03_TECNOLOGIA_Y_WEB</a></li>
+                <li><a href="#archivos">04_ARCHIVOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: HERO -->
+        <section id="inicio" class="hero">
+            <div class="terminal-box">
+                <p class="prompt">> Conectando a la red...</p>
+                <h1>DESPIERTA, NEO...</h1>
+                <p class="subtexto">La Matrix te tiene. Sigue al conejo blanco y descubre cómo funciona el código detrás de la pantalla.</p>
+                <a href="#trama" class="btn-matrix">[ INICIAR SECUENCIA ]</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TRAMA INTERACTIVA -->
+        <section id="trama" class="contenedor">
+            <h2>> 02_LA_ELECCION: ¿QUÉ ES LA MATRIX?</h2>
+            <div class="grid-dos">
+                <div class="texto-bloque">
+                    <p>Estrenada en 1999, <strong>The Matrix</strong> plantea que el mundo que percibimos es en realidad una simulación interactiva creada por máquinas para mantener controlada a la humanidad.</p>
+                    <p>Thomas Anderson, un programador de día y hacker conocido como <em>Neo</em> de noche, descubre la verdad gracias a Morpheus y su tripulación.</p>
+                    
+                    <div class="pastillas">
+                        <button onclick="elegirPastilla('azul')" class="btn-pastilla azul">[ PASTILLA AZUL ]</button>
+                        <button onclick="elegirPastilla('roja')" class="btn-pastilla roja">[ PASTILLA ROJA ]</button>
+                    </div>
+                    <p id="mensaje-pastilla" class="consola-respuesta">> Esperando decisión del usuario...</p>
+                </div>
+
+                <div class="imagen-contenedor">
+                    <!-- Reemplazá 'img/morpheus.jpg' con una imagen que descargues -->
+                    <img src="img/morpheus.jpg" alt="Morpheus ofreciendo las pastillas" class="imagen-matrix">
+                    <span class="pie-foto">FIG_01: Interfaz de decisión binaria (0 / 1)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: MATRIX Y EL DISEÑO WEB -->
+        <section id="web" class="contenedor">
+            <h2>> 03_PARALELISMO: MATRIX VS. DESARROLLO WEB</h2>
+            <p class="intro-seccion">Más allá de la ciencia ficción, la película representa visualmente cómo funcionan los sistemas informáticos y las páginas web que construimos hoy:</p>
+            
+            <div class="grid-tarjetas">
+                <article class="tarjeta">
+                    <h3>01. Código Verde = Backend</h3>
+                    <p>Los habitantes ven edificios y calles (la interfaz visual), pero los operadores ven cascadas de código. En la web, el usuario ve el diseño, pero detrás corren <strong>HTML, PHP y bases de datos</strong>.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>02. La Simulación = El DOM</h3>
+                    <p>La Matrix renderiza objetos en la mente conectada. De forma similar, el navegador lee nuestro código fuente y renderiza el <strong>DOM (Document Object Model)</strong> en pantalla.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>03. Agentes = Firewalls</h3>
+                    <p>El Agente Smith patrulla el sistema buscando anomalías para eliminarlas, funcionando igual que un <strong>Firewall o sistema de seguridad</strong> bloqueando accesos no autorizados.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>04. Dejà Vu = Bugs / Caché</h3>
+                    <p>En la peli, un déjà vu ocurre cuando las máquinas alteran el código en vivo. En diseño web, es el clásico <strong>glitch visual</strong> o un problema de caché al actualizar un archivo.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: GALERÍA DE ARCHIVOS -->
+        <section id="archivos" class="contenedor">
+            <h2>> 04_BASE_DE_DATOS: SUJETOS CLAVE</h2>
+            <div class="grid-galeria">
+                <div class="ficha">
+                    <img src="img/neo.jpg" alt="Neo" class="imagen-matrix">
+                    <h4>SUJETO: NEO</h4>
+                    <p>Rol: La Anomalía / Root User</p>
+                </div>
+                <div class="ficha">
+                    <img src="img/trinity.jpg" alt="Trinity" class="imagen-matrix">
+                    <h4>SUJETO: TRINITY</h4>
+                    <p>Rol: Hacker / Operadora de Red</p>
+                </div>
+                <div class="ficha">
+                    <img src="img/smith.jpg" alt="Agente Smith" class="imagen-matrix">
+                    <h4>PROGRAMA: AGENTE SMITH</h4>
+                    <p>Rol: Antivirus / Seguridad del Sistema</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>[ CONEXIÓN FINALIZADA // LABORATORIO DE DISEÑO WEB - 5° AÑO ]</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
