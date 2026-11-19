@@ -7,11 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Fondo animado con Canvas -->
-    <canvas id="matrix-bg"></canvas>
     <!-- Efecto sutil de monitor CRT -->
     <div class="crt-overlay"></div>
 
@@ -22,7 +20,8 @@
                 <li><a href="#inicio">01_INICIO</a></li>
                 <li><a href="#trama">02_LA_ELECCION</a></li>
                 <li><a href="#web">03_TECNOLOGIA_Y_WEB</a></li>
-                <li><a href="#archivos">04_ARCHIVOS</a></li>
+                <li><a href="#programas">04_PROGRAMAS_CARGA</a></li>
+                <li><a href="#archivos">05_ARCHIVOS</a></li>
             </ul>
         </nav>
     </header>
@@ -38,23 +37,28 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 2: TRAMA INTERACTIVA -->
+        <!-- SECCIÓN 2: TRAMA Y ELECCIÓN (CON DETAILS EN HTML) -->
         <section id="trama" class="contenedor">
             <h2>> 02_LA_ELECCION: ¿QUÉ ES LA MATRIX?</h2>
             <div class="grid-dos">
                 <div class="texto-bloque">
                     <p>Estrenada en 1999, <strong>The Matrix</strong> plantea que el mundo que percibimos es en realidad una simulación interactiva creada por máquinas para mantener controlada a la humanidad.</p>
                     <p>Thomas Anderson, un programador de día y hacker conocido como <em>Neo</em> de noche, descubre la verdad gracias a Morpheus y su tripulación.</p>
-                    
-                    <div class="pastillas">
-                        <button onclick="elegirPastilla('azul')" class="btn-pastilla azul">[ PASTILLA AZUL ]</button>
-                        <button onclick="elegirPastilla('roja')" class="btn-pastilla roja">[ PASTILLA ROJA ]</button>
+
+                    <div class="opciones-desplegables">
+                        <details class="desplegable azul">
+                            <summary>[ ABRIR ARCHIVO: PASTILLA AZUL ]</summary>
+                            <p class="consola-respuesta">> Elegiste la pastilla azul: volvés a tu rutina normal y cerrás la simulación sin alterar nada.</p>
+                        </details>
+
+                        <details class="desplegable roja">
+                            <summary>[ ABRIR ARCHIVO: PASTILLA ROJA ]</summary>
+                            <p class="consola-respuesta">> Elegiste la pastilla roja: entrás al sistema y ves qué hay detrás de la interfaz.</p>
+                        </details>
                     </div>
-                    <p id="mensaje-pastilla" class="consola-respuesta">> Esperando decisión del usuario...</p>
                 </div>
 
                 <div class="imagen-contenedor">
-                    <!-- Reemplazá 'img/morpheus.jpg' con una imagen que descargues -->
                     <img src="img/morpheus.jpg" alt="Morpheus ofreciendo las pastillas" class="imagen-matrix">
                     <span class="pie-foto">FIG_01: Interfaz de decisión binaria (0 / 1)</span>
                 </div>
@@ -65,7 +69,7 @@
         <section id="web" class="contenedor">
             <h2>> 03_PARALELISMO: MATRIX VS. DESARROLLO WEB</h2>
             <p class="intro-seccion">Más allá de la ciencia ficción, la película representa visualmente cómo funcionan los sistemas informáticos y las páginas web que construimos hoy:</p>
-            
+
             <div class="grid-tarjetas">
                 <article class="tarjeta">
                     <h3>01. Código Verde = Backend</h3>
@@ -89,9 +93,47 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 4: GALERÍA DE ARCHIVOS -->
+        <!-- SECCIÓN 4: PROGRAMAS DE CARGA (CDs / ENTRENAMIENTO INSTANTÁNEO) -->
+        <section id="programas" class="contenedor">
+            <h2>> 04_PROGRAMAS_DE_CARGA: MÓDULOS DE ENTRENAMIENTO</h2>
+            <p class="intro-seccion">En la nave Nabucodonosor, los operadores cargan discos con habilidades directo al cerebro del usuario. En desarrollo web y sistemas, esto funciona igual que importar <strong>librerías, frameworks o módulos externos</strong> para sumar funciones sin programar todo desde cero.</p>
+
+            <div class="grid-tarjetas">
+                <article class="tarjeta">
+                    <span class="etiqueta-cd">[ CD_01 // COMBATE ]</span>
+                    <h3>KUNG-FU.EXE</h3>
+                    <p>En segundos, Neo pasa de no saber pelear a dominar técnicas de combate. Es equivalente a importar una <strong>librería de funciones</strong> lista para ejecutar.</p>
+                    <details class="modulo-info">
+                        <summary>[ VER DETALLE DEL MÓDULO ]</summary>
+                        <p>Estado: listo para usar sin entrenar desde cero. Paralelo: incluir un archivo CSS o librería ya armada.</p>
+                    </details>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="etiqueta-cd">[ CD_02 // VEHÍCULOS ]</span>
+                    <h3>PILOTO_B212.BIN</h3>
+                    <p>Trinity aprende a pilotar un helicóptero al instante leyendo la rutina del disco, igual que un sistema que incorpora un <strong>plugin o driver nuevo</strong>.</p>
+                    <details class="modulo-info">
+                        <summary>[ VER DETALLE DEL MÓDULO ]</summary>
+                        <p>Estado: rutina cargada en memoria. Paralelo: sumar un componente o función nueva a un proyecto.</p>
+                    </details>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="etiqueta-cd">[ CD_03 // SIMULACIÓN ]</span>
+                    <h3>CONSTRUCTO_TEST.SYS</h3>
+                    <p>Un entorno blanco de prueba para entrenar sin riesgo real, exactamente igual que usar un <strong>servidor local (XAMPP)</strong> antes de subir una web a internet.</p>
+                    <details class="modulo-info">
+                        <summary>[ VER DETALLE DEL MÓDULO ]</summary>
+                        <p>Estado: entorno aislado de pruebas. Paralelo: probar cambios en tu PC antes de hacer <code>git push</code>.</p>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: GALERÍA DE ARCHIVOS -->
         <section id="archivos" class="contenedor">
-            <h2>> 04_BASE_DE_DATOS: SUJETOS CLAVE</h2>
+            <h2>> 05_BASE_DE_DATOS: SUJETOS CLAVE</h2>
             <div class="grid-galeria">
                 <div class="ficha">
                     <img src="img/neo.jpg" alt="Neo" class="imagen-matrix">
@@ -115,7 +157,5 @@
     <footer>
         <p>[ CONEXIÓN FINALIZADA // LABORATORIO DE DISEÑO WEB - 5° AÑO ]</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
